@@ -4,10 +4,10 @@
 baseurl:
 url: https://leezekun.github.io
 date_format: "ordinal"
-title: 桥豆麻袋
-subtitle: "空风波梦"
+title: 李泽坤的个人主页
+subtitle: "空 风 波 梦"
 description: "李泽坤的个人博客"
-keywords: 李泽坤, leezekun, personal page, 个人主页
+keywords: 李泽坤, leezekun, 桥豆麻袋, 个人主页
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
