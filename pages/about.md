@@ -7,13 +7,13 @@ comments: true
 menu: 关于
 permalink: /about/
 ---
-
-空 风 波 梦
+李泽坤
+山东大学计算机科学与技术学院
+14级基地班
 
 ## 联系
-
 * GitHub：[@leezekun](https://github.com/leezekun)
-* 微博: [@mzlogin](http://weibo.com/kuhnzzang)
+* 微博: [@kuhnzzang](http://weibo.com/kuhnzzang)
 
 ## Skill Keywords
 
