@@ -10,6 +10,8 @@ permalink: /about/
 李泽坤
 山东大学计算机科学与技术学院
 14级基地班
+![](/images/blog/profile.jpg)
+
 
 ## 联系
 * GitHub：[@leezekun](https://github.com/leezekun)
