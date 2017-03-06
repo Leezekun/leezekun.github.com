@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: 空风波梦
+description: 李泽坤的个人主页
 keywords: Leezekun，李泽坤
 comments: true
 menu: 关于
@@ -9,6 +9,11 @@ permalink: /about/
 ---
 
 空 风 波 梦
+
+## 联系
+
+* GitHub：[@leezekun](https://github.com/leezekun)
+* 微博: [@mzlogin](http://weibo.com/kuhnzzang)
 
 ## Skill Keywords
 
