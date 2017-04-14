@@ -1,13 +1,40 @@
-# 计算机图形学课程展示 
+# 计算机图形学课程展示
+## Assignment III: Ray Tracing
 
-    按照老师上课讲的ppt，此次画火柴人行走的重点在如果画分成两段的胳膊和腿，并使火柴人行走。首先设计了一个画方格的方法，火柴人的身体每一部分均为方格，不过不同部位的大小以及位置不同，可以用来实现。另外在画胳膊和腿的两部分的时候，按照ppt上所讲的步骤来画。在控制stickman行走的时候，每次使其手脚摆动一定角度，当达到最大角度时，将方向调反，反向摆动。
-    
-* glTranslatef(xPos,yPos,zPos);
-* glScalef(x,y,z);
-* glTranslatef(Tx,Ty,0);
-* glRotatef(u,0,0,1);
+  本章的重点为shader着色器，本次我的实验中使用了两种模型，分别为phong shading,lambert shading.
+  phong shading模型：考虑环境光，漫反射和镜面反射的模型，三种模型的计算公式在下列的fragment shader和vertex shader中给出。
+  Lambert shading模型：此种模型下只考虑漫反射。计算公式也在下列的shader文件中给出。
+  
+  phong：
+ ` vec4 Iamb = gl_FrontLightProduct[0].ambient;    
+
+   //calculate Diffuse Term:  
+    vec4 Idiff = gl_FrontLightProduct[0].diffuse * max(dot(N,L), 0.0);    
+   
+   // calculate Specular Term:
+    vec4 Ispec = gl_FrontLightProduct[0].specular * pow(max(dot(R,E),0.0),0.3*gl_FrontMaterial.shininess);
+
+   // write Total Color:  
+    gl_FragColor = gl_FrontLightModelProduct.sceneColor + Iamb + Idiff + Ispec;   `
+  
+  
+  lambert:
+ `   vec3 normal, lightDir;  
+    vec4 diffuse;  
+    float NdotL;  
+    /* 法线向量 */  
+    normal = normalize(gl_NormalMatrix * gl_Normal);  
+    /* 入射光向量*/  
+    lightDir = normalize(vec3(gl_LightSource[0].position));   
+	/* cosθ */  
+	NdotL = max(dot(normal, lightDir), 0.0);
+	/* 散射项 */  
+	diffuse = gl_FrontMaterial.diffuse * gl_LightSource[0].diffuse;  
+  
+	gl_FrontColor = NdotL * diffuse;gl_Position = ftransform();  `
 
 
 ## 以下为效果展示：
 
-![](/images/blog/walkingman.gif)
+![Lambert](/images/blog/diffuse.gif)
+![phong](/images/blog/phong.gif)
