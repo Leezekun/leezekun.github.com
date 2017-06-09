@@ -223,3 +223,7 @@ Color Scene::CalculateLighting(
 
 ![](/images/blog/multisphere_20.png)
 ![](/images/blog/multisphere_1.png)
+
+# 分析与结论：
+   根据上面的效果比较图我们可以看出raytracing之后场景中的各种光线可以完整的呈现。而没经过raytracing的图会丢失很多光线，会有很多细节丢失。例如chessboard图中的玻璃球会变得不透明，spheres图中的左边的球上右面球的投影会丢失。
+可以看出raytracing模仿了真实世界中光线的传播途径，较真实的反映了现实世界中的场景。
