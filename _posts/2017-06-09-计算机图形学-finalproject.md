@@ -208,8 +208,8 @@ Color Scene::CalculateLighting(
  </code></pre>
  
  
-# 以下为效果展示：
-## 效果比较图，上为raytrace 20 times的效果图，下为no raytrace的图。
+# 效果展示：
+## raytrace20次以及没有经过raytrace的效果图比较。
 (1)chessboard:
 
 ![](/images/blog/chessboard_20.png)
